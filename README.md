@@ -1,5 +1,7 @@
 # MPI-Final-Project
-Forward Error Correction in Practice
+Using MPI to accelerate the matrix calculations of FEC codes, speeding up the processing of large matrices and using multiple processors working together.
+![Uploading image.png…]()
+
 # For socket version
 The port number for the transmission is defined in 'socket.h', and the receiver's address is defined in 'encoder_main.c'.
 Note: You should run the Receiver/Decoder first to establish the socket tunnel.
