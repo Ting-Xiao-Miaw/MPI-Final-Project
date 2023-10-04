@@ -6,11 +6,15 @@ The port number for the transmission is defined in 'socket.h', and the receiver'
 Note: You should run the Receiver/Decoder first to establish the socket tunnel.
 
 1. Receiver/Decoder:
-    > mpirun -n 4 ./decoder_main.exe < H_matrix
+    ```
+    mpirun -n 4 ./decoder_main.exe < H_matrix
+    ```
     After receiving data from the sender, a new file named 'rev_data.txt' will be created in the same directory.
 
 2. Sender/Encoder:
-    > mpirun -n 4 ./encoder_main.exe < G_matrix
+    ```
+    mpirun -n 4 ./encoder_main.exe < G_matrix
+    ```
     Encode the data from the file named 'data.txt' and then transmit it to the receiver.
 
 ---------------------------------------------------------------------------------------------------------------------
