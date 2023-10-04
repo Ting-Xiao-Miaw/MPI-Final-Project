@@ -19,7 +19,8 @@ If you modify one bit in each row (7 bits), the Decoder will correct the data to
 1. Encoder:
     >> mpirun -n 4 ./encoder_main.exe < G_matrix
       It will output the encoded result.
-    Or >> mpirun -n 4 ./encoder_main.exe < G_matrix > result
+    Or
+    >> mpirun -n 4 ./encoder_main.exe < G_matrix > result
       Store the encoded result in the file 'data.txt'.
 
 2. Decoder:
@@ -29,4 +30,5 @@ If you modify one bit in each row (7 bits), the Decoder will correct the data to
       Encoded data:
         <input the output of encoder>
       File reverted(as 'rev_data.txt').
-    Or >> cat H_matrix result | mpirun -n 4 ./decoder_main.exe 
+    Or
+    >> cat H_matrix result | mpirun -n 4 ./decoder_main.exe 
