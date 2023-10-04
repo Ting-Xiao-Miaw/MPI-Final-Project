@@ -18,18 +18,26 @@ Note: You should run the Receiver/Decoder first to establish the socket tunnel.
 This version is designed for testing error correction functionality. 
 If you modify one bit in each row (7 bits), the Decoder will correct the data to the intended state.
 1. Encoder:
-    > mpirun -n 4 ./encoder_main.exe < G_matrix
+    ```
+    mpirun -n 4 ./encoder_main.exe < G_matrix
+    ```
       It will output the encoded result.
     Or
-    > mpirun -n 4 ./encoder_main.exe < G_matrix > result
+    ```
+    mpirun -n 4 ./encoder_main.exe < G_matrix > result
+    ```
       Store the encoded result in the file 'data.txt'.
 
-2. Decoder:
-    > mpirun -n 4 ./decoder_main.exe
+3. Decoder:
+    ```
+    mpirun -n 4 ./decoder_main.exe
+    ```
       H matrix:
         <input H matrix>
       Encoded data:
         <input the output of encoder>
       File reverted(as 'rev_data.txt').
     Or
-    > cat H_matrix result | mpirun -n 4 ./decoder_main.exe 
+    ```
+    cat H_matrix result | mpirun -n 4 ./decoder_main.exe
+    ```
